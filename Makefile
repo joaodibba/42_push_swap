@@ -6,7 +6,7 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 13:29:39 by jalves-c          #+#    #+#              #
-#    Updated: 2023/09/13 21:27:33 by jalves-c         ###   ########.fr        #
+#    Updated: 2023/09/13 21:49:22 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,12 @@ LFT		= include/libft/libft.a
 INC		= -I./include/libft
 LIB		= -L./include/libft -lft
 OBJ  	= $(patsubst src/%.c, obj/%.o, $(SRC))
-SRC		:=	$(wildcard src/mandatory/core/*.c) \
-			$(wildcard src/mandatory/operations/*.c) \
-			$(wildcard src/mandatory/sorting/*.c)
+SRC		:=	$(wildcard src/core/*.c) \
+			$(wildcard src/operations/*.c) \
+			$(wildcard src/sorting/*.c)
+SRC		:=	$(wildcard src/core/*.c) \
+			$(wildcard src/operations/*.c) \
+			$(wildcard src/sorting/*.c)
 
 # COLORS
 RED     = \033[0;31m

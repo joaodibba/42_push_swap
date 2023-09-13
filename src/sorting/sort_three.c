@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:38:19 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:22:51 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:55:20 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	sort_three(t_shipyard *shipyard)
 {

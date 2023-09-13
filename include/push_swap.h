@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:24:51 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:53:02 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define RESET "\e[0;37m"
 # define CLEAR "\033c"
 
+// STRUCTURES [SHIPYARD->SHIP->CONTAINER]
 typedef struct s_container // CONTAINER -> NODE     
 {
 	int					value;

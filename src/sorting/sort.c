@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:24:40 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:23:33 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:55:12 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	stack_size(t_container *head)
 {

@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:56 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:21:34 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:55:32 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 // [SA] SWAP_A: swaps the first 2 elements at the top of stack A (do nothing if there is only one or no elements).
 void	sa(t_ship *ship_a)

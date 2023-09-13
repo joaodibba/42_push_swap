@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:40:36 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:16:03 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:54:40 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	push(int value,	int index, t_ship *ship)
 {

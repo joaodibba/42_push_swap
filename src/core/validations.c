@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:00:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:25:35 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:53:55 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 bool	arguments_are_duplicated(int ac, char **av)
 {

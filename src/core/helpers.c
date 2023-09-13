@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:48:23 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:25:26 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:58:11 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	free_stack(t_ship *ship)
 {
@@ -35,7 +35,8 @@ void	free_stack(t_ship *ship)
 // 	while (current)
 // 	{
 // 		printf("_____________________________________\n");
-// 		printf("Node %d -> Index %d -> Value: %d\n", i, current->index, current->value);
+// 		printf("Node %d -> Index %d -> Value: %d\n",
+// 			i, current->index, current->value);
 // 		printf(YELLOW"Previous Node Address: %p\n"RESET, current->prev);
 // 		printf(RED"Address: %p\n"BLUE, current);
 // 		printf(BLUE"Next Node Address: %p\n"RESET, current->next);

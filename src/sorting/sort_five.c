@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:38:25 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 20:43:40 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:53:40 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	find_smallest(t_ship *ship)
 {
@@ -25,7 +25,6 @@ int	find_smallest(t_ship *ship)
 			smallest = current->value;
 		current = current->next;
 	}
-
 	return (smallest);
 }
 

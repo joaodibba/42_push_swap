@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 22:22:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:21:24 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:50:39 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	add_index(t_ship *ship)
 {

@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:47:32 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:25:32 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:51:14 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 t_ship	*add_back(int value, t_ship *ship)
 {

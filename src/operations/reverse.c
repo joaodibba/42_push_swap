@@ -6,11 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:28 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:16:14 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:56:09 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 // [RRA] REVERSE_ROTATE_A: shift down all elements of stack A by 1 (the last element becomes the first one).
 void	rra(t_ship *ship_a)
@@ -30,14 +30,10 @@ void	rra(t_ship *ship_a)
 	printf("rra\n");
 }
 
-
-// if (!ship_a->head || !ship_a->head->next || !ship_a->tail || ship_a->head == ship_a->tail)
-// 	return;
 // If there are 0 elements in the list (!ship_a->head)
 // If there is only 1 element in the list (!ship_a->head->next)
 // If the list is uninitialized (!ship_a->tail)
 // If there is only 1 element in the list, and head is equal to tail (ship_a->head == ship_a->tail)
-
 
 // [RRB] REVERSE_ROTATE_B: shift down all elements of stack B by 1 (the last element becomes the first one).
 void	rrb(t_ship *ship_b)
