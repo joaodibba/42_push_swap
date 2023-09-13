@@ -5,28 +5,24 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/05 13:05:54 by jalves-c          #+#    #+#              #
-#    Updated: 2023/09/05 13:12:12 by jalves-c         ###   ########.fr        #
+#    Created: 2023/09/05 13:29:39 by jalves-c          #+#    #+#              #
+#    Updated: 2023/09/13 16:38:45 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/01 16:38:57 by jalves-c          #+#    #+#              #
-#    Updated: 2023/06/13 16:20:34 by jalves-c         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME	= push_swap
+CC		= @cc
+FLAGS	= -Wall -Wextra -Werror
+LFT		= include/libft/libft.a
+INC		= -I./include/libft
+LIB		= -L./include/libft -lft
+SRC		:=	$(wildcard src/mandatory/*.c) \
+			$(wildcard src/mandatory/operations/*.c) \
+			$(wildcard src/mandatory/sorting/*.c)
 
-NAME  = push_swap
-CC    = @cc
-FLAGS = -Wall -Wextra -Werror
-LFT   = include/libft/libft.a
-SRC   = src/main.c
+# Rest of your Makefile rules and targets
+
+
 OBJ   = $(patsubst src/%.c, obj/%.o, $(SRC))
 
 # COLORS
@@ -76,6 +72,6 @@ norm:
 	fi
 
 re: fclean norm all
-	@make re -s && ./push_swap
+	@make -s
 
 .PHONY: all
