@@ -6,12 +6,11 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:04:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 16:47:58 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 18:23:51 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-#include <string.h>
 
 bool arguments_are_duplicated(int ac, char **av)
 {
@@ -168,6 +167,19 @@ void	printLinkedList(t_ship *ship)
 	}
 }
 
+void	free_list(t_ship *ship)
+{
+	t_container *current;
+
+	while(ship->head)
+	{
+		current = ship->head;
+		ship->head = ship->head->next;
+		free(current);
+	}
+	free(ship);
+}
+
 int main(int ac, char **av)
 {
     t_shipyard shipyard;
@@ -179,6 +191,9 @@ int main(int ac, char **av)
     }
 
     shipyard.ship_a = (t_ship *)malloc(sizeof(t_ship));
+	shipyard.ship_b = (t_ship *)malloc(sizeof(t_ship));
+	if (!shipyard.ship_b || !shipyard.ship_a)
+		return (1);
     if (!shipyard.ship_a) 
 	{
         ft_printf("Error [MEMORY ALLOCATION FAILED].\n");
@@ -197,8 +212,7 @@ int main(int ac, char **av)
 		return (1);
 	}
 	sort(&shipyard);
-	// printLinkedList(shipyard.ship_a);
-	// printf("B\n");
-	// printLinkedList(shipyard.ship_b);
+	free_list(shipyard.ship_a);
+	free_list(shipyard.ship_b);
     return (0);
 }
