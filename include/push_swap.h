@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 16:49:45 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:24:51 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,17 +45,29 @@ typedef struct s_shipyard // SHIPYARD -> GENERAL STRUCTURE
 	struct s_ship	*ship_b;
 }					t_shipyard;
 
+// VALIDATIONS
+bool		arguments_are_valid(int ac, char **av);
+bool		arguments_are_duplicated(int ac, char **av);
+bool		arguments_are_within_integer_range(char *av);
+bool		arguments_are_numbers(char *av);
+
+// STACK CREATION AND MANAGEMENT
+void		create_stack(int ac, char **av, t_shipyard *shipyard);
+void		pop(t_ship *ship);
+void		push(int value,	int index, t_ship *ship);
+int			stack_size(t_container *head);
+void		free_stack(t_ship *ship);
+void		print_stack(t_ship *ship);
+
+// SORTING
 void		sort(t_shipyard *shipyard);
-bool		is_sorted(t_ship *ship);
 void		sort_three(t_shipyard *shipyard);
 void		sort_five(t_shipyard *shipyard);
 void		radix(t_shipyard *shipyard);
 int			find_max_bits(t_ship *ship);
-void		sort_merda(t_shipyard *shipyard); //lixo
+bool		is_sorted(t_ship *ship);
 
-void		pop(t_ship *ship);
-void		push(int value,	int index, t_ship *ship);
-
+// SORTING -> MOVES
 void		sa(t_ship *ship_a);
 void		sb(t_ship *ship_b);
 void		ss(t_shipyard *shipyard);
@@ -70,10 +82,5 @@ void		rrr(t_shipyard *shipyard);
 
 void		pb(t_shipyard *shipyard);
 void		pa(t_shipyard *shipyard);
-
-int			list_size(t_container *head);
-void		printLinkedList(t_ship *ship);
-
-void		print_stack(t_ship *ship); //
 
 #endif

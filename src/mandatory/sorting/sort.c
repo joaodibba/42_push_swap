@@ -6,22 +6,22 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:24:40 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/12 22:26:58 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 21:23:33 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-int	list_size(t_container *head)
+int	stack_size(t_container *head)
 {
 	if (!head)
 		return (0);
-	return (1 + list_size(head->next));
+	return (1 + stack_size(head->next));
 }
 
 bool	is_sorted(t_ship *ship)
 {
-	t_container *current;
+	t_container	*current;
 
 	if (!ship->head)
 		return (true);
@@ -37,15 +37,13 @@ bool	is_sorted(t_ship *ship)
 
 void	sort(t_shipyard *shipyard)
 {
-	int	listsize;
-	bool sorted;
+	int	stacksize;
 
-	sorted = is_sorted(shipyard->ship_a);
-	listsize = list_size(shipyard->ship_a->head);
-	if (listsize <= 3 && !sorted)
+	stacksize = stack_size(shipyard->ship_a->head);
+	if (stacksize <= 3 && !is_sorted(shipyard->ship_a))
 		sort_three(shipyard);
-	else if (listsize <= 5 && !sorted)
+	else if (stacksize <= 5 && !is_sorted(shipyard->ship_a))
 		sort_five(shipyard);
-	else if (listsize > 5 && !sorted)
+	else if (stacksize > 5 && !is_sorted(shipyard->ship_a))
 		radix(shipyard);
 }

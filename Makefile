@@ -6,7 +6,7 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 13:29:39 by jalves-c          #+#    #+#              #
-#    Updated: 2023/09/13 18:02:49 by jalves-c         ###   ########.fr        #
+#    Updated: 2023/09/13 21:27:33 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,10 @@ FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 LFT		= include/libft/libft.a
 INC		= -I./include/libft
 LIB		= -L./include/libft -lft
-SRC		:=	$(wildcard src/mandatory/*.c) \
+OBJ  	= $(patsubst src/%.c, obj/%.o, $(SRC))
+SRC		:=	$(wildcard src/mandatory/core/*.c) \
 			$(wildcard src/mandatory/operations/*.c) \
 			$(wildcard src/mandatory/sorting/*.c)
-
-# Rest of your Makefile rules and targets
-
-
-OBJ   = $(patsubst src/%.c, obj/%.o, $(SRC))
 
 # COLORS
 RED     = \033[0;31m

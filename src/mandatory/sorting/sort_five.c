@@ -6,32 +6,34 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:38:25 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/12 22:22:23 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 20:43:40 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-int find_smallest(t_ship *ship)
+int	find_smallest(t_ship *ship)
 {
-    int smallest = ship->head->value;
+	int			smallest;
+	t_container	*current;
 
-    t_container *current = ship->head;
-
-    while (current != NULL) 
+	smallest = ship->head->value;
+	current = ship->head;
+	while (current != NULL)
 	{
-        if (current->value < smallest) 
-            smallest = current->value;
-        current = current->next;
-    }
+		if (current->value < smallest)
+			smallest = current->value;
+		current = current->next;
+	}
 
-    return (smallest);
+	return (smallest);
 }
 
 void	sort_five(t_shipyard *shipyard)
 {
-	int	smallest = find_smallest(shipyard->ship_a);
-	
+	int	smallest;
+
+	smallest = find_smallest(shipyard->ship_a);
 	while (shipyard->ship_a->head->value != smallest)
 		rra(shipyard->ship_a);
 	pb(shipyard);
