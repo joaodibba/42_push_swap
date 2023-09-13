@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:53:02 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 22:14:00 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "libft/libft.h"
 # include <stdbool.h>
+
+# define STDERR 2
 
 // PRINTF_COLORS
 # define RED "\e[0;31m"

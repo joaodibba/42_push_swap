@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:52 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:54:36 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 22:08:33 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ra(t_ship *ship_a)
 	// Break the circular link
 	ship_a->tail->next = NULL;
 	ship_a->head->prev = NULL;
-	printf("ra\n");
+	ft_printf("ra\n");
 }
 
 // [RB] ROTATE_B: shift up all elements of stack B by 1 (the first element becomes the last one).
@@ -42,12 +42,12 @@ void	rb(t_ship *ship_b)
 	ship_b->head = ship_b->head->next;
 	ship_b->tail->next = NULL;
 	ship_b->head->prev = NULL;
-	printf("rb\n");
+	ft_printf("rb\n");
 }
 
-void	rrr(t_shipyard *shipyard)
-{
-	rra(shipyard->ship_a);
-	rrb(shipyard->ship_b);
-	printf("rrr\n");
-}
+// void	rr(t_shipyard *shipyard)
+// {
+// 	ra(shipyard->ship_a);
+// 	rb(shipyard->ship_b);
+// 	printf("rr\n");
+// }

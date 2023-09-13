@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:56 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:55:32 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 22:07:45 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sa(t_ship *ship_a)
 	temp = ship_a->head->value;
 	ship_a->head->value = ship_a->head->next->value;
 	ship_a->head->next->value = temp;
-	printf("sa\n");
+	ft_printf("sa\n");
 }
 
 // [SB] SWAP_B: swaps the first 2 elements at the top of stack B (do nothing if there is only one or no elements).
@@ -35,12 +35,12 @@ void	sb(t_ship *ship_b)
 	temp = ship_b->head->value;
 	ship_b->head->value = ship_b->head->next->value;
 	ship_b->head->next->value = temp;
-	printf("sb\n");
+	ft_printf("sb\n");
 }
 
-void	ss(t_shipyard *shipyard)
-{
-	sa(shipyard->ship_a);
-	sb(shipyard->ship_b);
-	printf("ss\n");
-}
+// void	ss(t_shipyard *shipyard)
+// {
+// 	sa(shipyard->ship_a);
+// 	sb(shipyard->ship_b);
+// 	ft_printf("ss\n");
+// }

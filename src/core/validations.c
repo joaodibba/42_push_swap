@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:00:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:53:55 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 23:22:07 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ bool	arguments_are_duplicated(int ac, char **av)
 			if (ft_strcmp(av[i], av[j]) == 0)
 			{
 				duplicate_found = true;
-				ft_printf("AV[%d] ", i);
-				ft_printf("AND AV[%d] ARE THE SAME\n", j);
+				ft_printf("AV[%d] ", i); //
+				ft_printf("AND AV[%d] ARE THE SAME\n", j); //
 			}
 			j++;
 		}
@@ -39,12 +39,22 @@ bool	arguments_are_duplicated(int ac, char **av)
 	return (duplicate_found);
 }
 
+int	compare(const char *s1, const char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}
+
 bool	arguments_are_within_integer_range(char *av)
 {
 	if ((av[0] == '-' && (ft_strlen(av) > 11 || \
-		(ft_strlen(av) == 11 && ft_strcmp(av, "-2147483648") > 0))) || \
+		(ft_strlen(av) == 11 && compare(av, "-2147483648") > 0))) || \
 		(av[0] != '-' && (ft_strlen(av) > 10 || \
-		(ft_strlen(av) == 10 && ft_strcmp(av, "2147483647") > 0))))
+		(ft_strlen(av) == 10 && compare(av, "2147483647") > 0))))
 		return (false);
 	return (true);
 }
@@ -71,19 +81,19 @@ bool	arguments_are_valid(int ac, char **av)
 {
 	if (arguments_are_duplicated(ac, av) == true)
 	{
-		ft_printf("Error [DUPLICATES].\n");
+		ft_printf("Error [DUPLICATES].\n"); //
 		return (false);
 	}
 	while (ac-- > 1)
 	{
 		if (arguments_are_numbers(av[ac]) != true)
 		{
-			ft_printf("Error [NOT A NUMBER].\n");
+			ft_printf("Error [NOT A NUMBER].\n"); //
 			return (false);
 		}
 		if (arguments_are_within_integer_range(av[ac]) != true)
 		{
-			ft_printf("Error [NOT A INTEGER].\n");
+			ft_printf("Error [NOT A INTEGER].\n"); //
 			return (false);
 		}
 	}

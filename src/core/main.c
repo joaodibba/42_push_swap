@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:04:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:51:14 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 00:21:40 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,19 @@ int	main(int ac, char **av)
 {
 	t_shipyard	shipyard;
 
-	if (!arguments_are_valid(ac, av))
+	if (ac == 2)
 	{
-		ft_printf("Error\n");
-		return (1);
+		//funcao que separa string
+		sort(&shipyard);
+		free_stack(shipyard.ship_a);
+		return (0);
 	}
-	if (init(ac, av, &shipyard))
+	if (ac > 2 && arguments_are_valid(ac, av) && !init(ac, av, &shipyard))
 	{
-		ft_printf("Error\n");
-		return (1);
+		sort(&shipyard);
+		free_stack(shipyard.ship_a);
+		return (0);
 	}
-	sort(&shipyard);
-	free_stack(shipyard.ship_a);
-	return (0);
+	ft_putstr_fd("Error\n", STDERR);
+	return (1);
 }

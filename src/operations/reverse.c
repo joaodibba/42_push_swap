@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:28 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:56:09 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/13 22:08:39 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	rra(t_ship *ship_a)
 	// Break the circular link
 	ship_a->tail->next = NULL;
 	ship_a->head->prev = NULL;
-	printf("rra\n");
+	ft_printf("rra\n");
 }
 
 // If there are 0 elements in the list (!ship_a->head)
@@ -47,12 +47,12 @@ void	rrb(t_ship *ship_b)
 	ship_b->head = ship_b->tail->next;
 	ship_b->tail->next = NULL;
 	ship_b->head->prev = NULL;
-	printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
-void	rr(t_shipyard *shipyard)
-{
-	ra(shipyard->ship_a);
-	rb(shipyard->ship_b);
-	printf("rrr\n");
-}
+// void	rrr(t_shipyard *shipyard)
+// {
+// 	rra(shipyard->ship_a);
+// 	rrb(shipyard->ship_b);
+// 	printf("rrr\n");
+// }
