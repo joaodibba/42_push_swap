@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:28 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 22:08:39 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:49:53 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ void	rrb(t_ship *ship_b)
 // {
 // 	rra(shipyard->ship_a);
 // 	rrb(shipyard->ship_b);
-// 	printf("rrr\n");
+// 	ft_printf("rrr\n");
 // }

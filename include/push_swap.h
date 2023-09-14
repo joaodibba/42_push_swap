@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 21:25:49 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:51:24 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include "libft/libft.h"
 # include <stdbool.h>
-
-#include <string.h> //
+# include <limits.h>
 
 # define STDERR 2
 
@@ -63,7 +62,9 @@ void		pop(t_ship *ship);
 void		push(int value,	int index, t_ship *ship);
 int			stack_size(t_container *head);
 void		free_stack(t_ship *ship);
+void		free_all(t_shipyard *shipyard, char **av);
 void		print_stack(t_ship *ship);
+int			doublearraysize(char **av);
 
 // SORTING
 void		sort(t_shipyard *shipyard);

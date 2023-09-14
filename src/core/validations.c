@@ -1,4 +1,4 @@
-				/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   validations.c                                      :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:00:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 18:05:38 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:56:08 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,47 +22,45 @@ int	compare(const char *s1, const char *s2)
 	return (*s1 - *s2);
 }
 
-bool arguments_are_duplicated(int ac, char **av)
+bool	arguments_are_duplicated(int ac, char **av)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i = 0;
-    j = 0;
-    while (i < ac - 1)
-    {
-        j = i + 1;
-        while (j < ac)
-        {
-            if (ft_atoi(av[i]) == ft_atoi(av[j]))
-                return (true);
-            j++;
-        }
-        i++;
-    }
-    return (false);
+	i = 0;
+	j = 0;
+	while (i < ac - 1)
+	{
+		j = i + 1;
+		while (j < ac)
+		{
+			if (ft_atoi(av[i]) == ft_atoi(av[j]))
+				return (true);
+			j++;
+		}
+		i++;
+	}
+	return (false);
 }
-
-#include <limits.h>
 
 bool	arguments_are_within_integer_range(int ac, char **av)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (i < ac)
-    {
-		 if ((long_atoi(av[i]) > INT_MAX || long_atoi(av[i]) < INT_MIN))
-		    return (false);
-        i++;
-    }
-    return (true);
+	i = 0;
+	while (i < ac)
+	{
+		if ((long_atoi(av[i]) > INT_MAX || long_atoi(av[i]) < INT_MIN))
+			return (false);
+		i++;
+	}
+	return (true);
 }
 
-bool arguments_are_numbers(int ac, char **av)
+bool	arguments_are_numbers(int ac, char **av)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	j = 0;
 	i = 0;

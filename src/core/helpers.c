@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:48:23 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 21:27:49 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:56:00 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,14 @@ void	free_stack(t_ship *ship)
 	free(ship);
 }
 
-void	print_stack(t_ship *ship)
+void	free_all(t_shipyard *shipyard, char **av)
 {
-	int			i;
-	t_container	*current;
-
-	i = 1;
-	current = ship->head;
-	while (current)
-	{
-		printf("_____________________________________\n");
-		printf("Node %d -> Index %d -> Value: %d\n",
-			i, current->index, current->value);
-		printf(YELLOW"Previous Node Address: %p\n"RESET, current->prev);
-		printf(RED"Address: %p\n"BLUE, current);
-		printf(BLUE"Next Node Address: %p\n"RESET, current->next);
-		printf("_____________________________________\n");
-		current = current->next;
-		i++;
-	}
+	if (shipyard->ship_a)
+		free_stack(shipyard->ship_a);
+	if (shipyard->ship_b)
+		free_stack(shipyard->ship_b);
+	if (av)
+		ft_free_matrix(av);
 }
 
 long int	long_atoi(const char *str)
@@ -67,3 +56,34 @@ long int	long_atoi(const char *str)
 		res = res * 10 + (str[i++] - '0');
 	return (res * sign);
 }
+
+int	doublearraysize(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+		i ++;
+	return (i);
+}
+
+// void	print_stack(t_ship *ship)
+// {
+// 	int			i;
+// 	t_container	*current;
+
+// 	i = 1;
+// 	current = ship->head;
+// 	while (current)
+// 	{
+// 		printf("_____________________________________\n");
+// 		printf("Node %d -> Index %d -> Value: %d\n",
+// 			i, current->index, current->value);
+// 		printf(YELLOW"Previous Node Address: %p\n"RESET, current->prev);
+// 		printf(RED"Address: %p\n"BLUE, current);
+// 		printf(BLUE"Next Node Address: %p\n"RESET, current->next);
+// 		printf("_____________________________________\n");
+// 		current = current->next;
+// 		i++;
+// 	}
+// }

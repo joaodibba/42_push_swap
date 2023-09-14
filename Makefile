@@ -6,20 +6,17 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 13:29:39 by jalves-c          #+#    #+#              #
-#    Updated: 2023/09/14 16:46:31 by jalves-c         ###   ########.fr        #
+#    Updated: 2023/09/14 22:57:06 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 CC		= @cc
-FLAGS	= #-Wall -Wextra -Werror -g -fsanitize=address
+FLAGS	= -Wall -Wextra -Werror #-g -fsanitize=address
 LFT		= include/libft/libft.a
 INC		= -I./include/libft
 LIB		= -L./include/libft -lft
 OBJ  	= $(patsubst src/%.c, obj/%.o, $(SRC))
-SRC		:=	$(wildcard src/core/*.c) \
-			$(wildcard src/operations/*.c) \
-			$(wildcard src/sorting/*.c)
 SRC		:=	$(wildcard src/core/*.c) \
 			$(wildcard src/operations/*.c) \
 			$(wildcard src/sorting/*.c)
