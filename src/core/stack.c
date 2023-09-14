@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 12:47:32 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 21:51:14 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:59:06 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	create_stack(int ac, char **av, t_shipyard *shipyard)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
 		shipyard->ship_a = add_back(ft_atoi(av[i]), shipyard->ship_a);

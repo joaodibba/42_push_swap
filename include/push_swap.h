@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 22:14:00 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 21:25:49 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "libft/libft.h"
 # include <stdbool.h>
+
+#include <string.h> //
 
 # define STDERR 2
 
@@ -51,8 +53,9 @@ typedef struct s_shipyard // SHIPYARD -> GENERAL STRUCTURE
 // VALIDATIONS
 bool		arguments_are_valid(int ac, char **av);
 bool		arguments_are_duplicated(int ac, char **av);
-bool		arguments_are_within_integer_range(char *av);
-bool		arguments_are_numbers(char *av);
+bool		arguments_are_within_integer_range(int ac, char **av);
+bool		arguments_are_numbers(int ac, char **av);
+long int	long_atoi(const char *str);
 
 // STACK CREATION AND MANAGEMENT
 void		create_stack(int ac, char **av, t_shipyard *shipyard);
