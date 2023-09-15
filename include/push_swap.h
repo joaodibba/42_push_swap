@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:33:09 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 22:51:24 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 01:02:26 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void		pop(t_ship *ship);
 void		push(int value,	int index, t_ship *ship);
 int			stack_size(t_container *head);
 void		free_stack(t_ship *ship);
-void		free_all(t_shipyard *shipyard, char **av);
+void		free_all(t_shipyard *shipyard, char **av, int flag);
 void		print_stack(t_ship *ship);
 int			doublearraysize(char **av);
 
@@ -73,6 +73,7 @@ void		sort_five(t_shipyard *shipyard);
 void		radix(t_shipyard *shipyard);
 int			find_max_bits(t_ship *ship);
 bool		is_sorted(t_ship *ship);
+void		add_index(t_ship *ship);
 
 // SORTING -> MOVES
 void		sa(t_ship *ship_a);

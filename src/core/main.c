@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:04:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 22:19:02 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/14 23:58:12 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	init(int ac, char **av, t_shipyard *shipyard)
 	return (0);
 }
 
-int	push_swap(t_shipyard *shipyard, char **av)
+int	push_swap(t_shipyard *shipyard, char **av, int flag)
 {
 	sort(shipyard);
-	free_all(shipyard, av);
+	free_all(shipyard, av, flag);
 	return (0);
 }
 
@@ -45,14 +45,14 @@ int	main(int ac, char **av)
 		av = ft_split(*av, ' ');
 		ac = doublearraysize(av);
 		if (arguments_are_valid(ac, av) && !init(ac, av, &shipyard))
-			return (push_swap(&shipyard, av));
-		free_all(&shipyard, av);
+			return (push_swap(&shipyard, av, 1));
+		free_all(&shipyard, av, 1);
 		ft_putstr_fd("Error\n", STDERR);
 		return (1);
 	}
 	if (ac-- > 1 && arguments_are_valid(ac, av) && !init(ac, av, &shipyard))
-		return (push_swap(&shipyard, av));
-	free_all(&shipyard, av);
+		return (push_swap(&shipyard, av, 0));
+	free_all(&shipyard, av, 0);
 	ft_putstr_fd("Error\n", STDERR);
 	return (1);
 }
