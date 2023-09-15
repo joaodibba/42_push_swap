@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:04:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/15 02:14:38 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:39:02 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main(int ac, char **av)
 	t_shipyard	shipyard;
 
 	av++;
+	ft_bzero(&shipyard, sizeof(shipyard));
 	if (ac == 2)
 	{
 		av = ft_split(*av, ' ');
@@ -52,7 +53,6 @@ int	main(int ac, char **av)
 	}
 	if (ac-- > 1 && arguments_are_valid(ac, av) && !init(ac, av, &shipyard))
 		return (push_swap(&shipyard, av, 0));
-	free_all(&shipyard, av, 0);
 	ft_putstr_fd("Error\n", STDERR);
 	return (1);
 }

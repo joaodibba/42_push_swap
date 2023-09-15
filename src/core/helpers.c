@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:48:23 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/15 01:01:17 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 02:25:31 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,27 +63,27 @@ int	doublearraysize(char **av)
 
 	i = 0;
 	while (av[i])
-		i ++;
+		i++;
 	return (i);
 }
 
-void	print_stack(t_ship *ship)
-{
-	int			i;
-	t_container	*current;
+// void	print_stack(t_ship *ship)
+// {
+// 	int			i;
+// 	t_container	*current;
 
-	i = 1;
-	current = ship->head;
-	while (current)
-	{
-		printf("_____________________________________\n");
-		printf("Node %d -> Index %d -> Value: %d\n",
-			i, current->index, current->value);
-		printf(YELLOW"Previous Node Address: %p\n"RESET, current->prev);
-		printf(RED"Address: %p\n"BLUE, current);
-		printf(BLUE"Next Node Address: %p\n"RESET, current->next);
-		printf("_____________________________________\n");
-		current = current->next;
-		i++;
-	}
-}
+// 	i = 1;
+// 	current = ship->head;
+// 	while (current)
+// 	{
+// 		printf("_____________________________________\n");
+// 		printf("Node %d -> Index %d -> Value: %d\n",
+// 			i, current->index, current->value);
+// 		printf(YELLOW"Previous Node Address: %p\n"RESET, current->prev);
+// 		printf(RED"Address: %p\n"BLUE, current);
+// 		printf(BLUE"Next Node Address: %p\n"RESET, current->next);
+// 		printf("_____________________________________\n");
+// 		current = current->next;
+// 		i++;
+// 	}
+// }

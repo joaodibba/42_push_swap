@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:00:39 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/14 22:56:08 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:38:52 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ bool	arguments_are_numbers(int ac, char **av)
 
 bool	arguments_are_valid(int ac, char **av)
 {
-	if (arguments_are_numbers(ac, av) != true)
+	if (!arguments_are_numbers(ac, av))
 		return (false);
 	if (arguments_are_within_integer_range(ac, av) == false)
 		return (false);
