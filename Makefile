@@ -6,7 +6,7 @@
 #    By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 13:29:39 by jalves-c          #+#    #+#              #
-#    Updated: 2023/09/14 22:57:06 by jalves-c         ###   ########.fr        #
+#    Updated: 2023/09/15 02:20:34 by jalves-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,18 @@ LFT		= include/libft/libft.a
 INC		= -I./include/libft
 LIB		= -L./include/libft -lft
 OBJ  	= $(patsubst src/%.c, obj/%.o, $(SRC))
-SRC		:=	$(wildcard src/core/*.c) \
-			$(wildcard src/operations/*.c) \
-			$(wildcard src/sorting/*.c)
+SRC		:=	src/core/main.c \
+			src/core/helpers.c \
+			src/core/stack.c \
+			src/core/validations.c \
+			src/operations/push.c \
+			src/operations/reverse.c \
+			src/operations/rotate.c \
+			src/operations/swap.c \
+			src/sorting/sort.c \
+			src/sorting/sort_three.c \
+			src/sorting/sort_five.c \
+			src/sorting/radix.c
 
 # COLORS
 RED     = \033[0;31m

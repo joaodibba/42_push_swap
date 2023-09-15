@@ -6,13 +6,14 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:41:56 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/13 22:07:45 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 02:15:56 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-// [SA] SWAP_A: swaps the first 2 elements at the top of stack A (do nothing if there is only one or no elements).
+// [SA] SWAP_A: swaps the first 2 elements at the top of stack A 
+// (do nothing if there is only one or no elements).
 void	sa(t_ship *ship_a)
 {
 	int	temp;
@@ -25,7 +26,8 @@ void	sa(t_ship *ship_a)
 	ft_printf("sa\n");
 }
 
-// [SB] SWAP_B: swaps the first 2 elements at the top of stack B (do nothing if there is only one or no elements).
+// [SB] SWAP_B: swaps the first 2 elements at the top of stack B 
+// (do nothing if there is only one or no elements).
 void	sb(t_ship *ship_b)
 {
 	int	temp;

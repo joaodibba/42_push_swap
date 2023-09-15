@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:38:25 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/15 01:25:06 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/15 02:16:56 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	find_smallest_index(t_ship *ship)
 	return (smallest->index);
 }
 
-void index_rec(t_container *head, int i)
+void	index_rec(t_container *head, int i)
 {
 	if (!head)
 		return ;
@@ -69,7 +69,7 @@ void	sort_five(t_shipyard *shipyard)
 				ra(shipyard->ship_a);
 		else
 			while (shipyard->ship_a->head->value != smallest_value)
-				rra(shipyard->ship_a);	
+				rra(shipyard->ship_a);
 		pb(shipyard);
 		i--;
 	}
