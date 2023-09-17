@@ -6,7 +6,7 @@
 /*   By: jalves-c < jalves-c@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 13:04:48 by jalves-c          #+#    #+#             */
-/*   Updated: 2023/09/15 13:39:02 by jalves-c         ###   ########.fr       */
+/*   Updated: 2023/09/17 03:54:29 by jalves-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int	main(int ac, char **av)
 	t_shipyard	shipyard;
 
 	av++;
+	if (ac == 1)
+		return (0);
 	ft_bzero(&shipyard, sizeof(shipyard));
 	if (ac == 2)
 	{
